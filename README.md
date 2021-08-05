@@ -6,7 +6,7 @@
 
 Read More about diagrams : [Mermaid](https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted)
 
-![gant-chart](.\documentation\images\gant-chart.png)
+![gant-chart](documentation/images/gant-chart.png)
 
 https://mermaid-js.github.io/mermaid-live-editor
 
@@ -41,7 +41,7 @@ gantt
             
 ```
 
-![schedule](.\documentation\images\schedule.png)
+![schedule](documentation/images/schedule.png)
 
 ```
   journey
@@ -61,7 +61,7 @@ gantt
       
 ```
 
-![routine-pie](.\documentation\images\routine-pie.png)
+![routine-pie](documentation/images/routine-pie.png)
 
 ```
 pie title Daily Routine
@@ -72,7 +72,7 @@ pie title Daily Routine
             
 ```
 
-![state-diagram](.\documentation\images\state-diagram.png)
+![state-diagram](documentation/images/state-diagram.png)
 
 
 
