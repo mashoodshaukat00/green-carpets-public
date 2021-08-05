@@ -80,10 +80,13 @@ pie title Daily Routine
 stateDiagram-v2
     [*] --> Awake    
     Awake --> Searchjob
-    Searchjob --> Dvelopement
+    Awake -->[*]
+    Searchjob --> Developement
     Developement --> Searchjob
     Searchjob --> Exhaust
+    Developement --> Exhaust    
     Exhaust --> [*]
+
             
 ```
 
