@@ -1,38 +1,9 @@
-﻿sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,FirstName,2,nvarchar,75,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,MiddleName,3,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,LastName,4,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Address,5,nvarchar,250,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,PostalCode,6,nvarchar,20,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,City,7,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Phone,8,nvarchar,20,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Email,9,nvarchar,150,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,IsDeleted,10,bit,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,CreatedBy,11,nvarchar,100,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,CreatedAt,12,datetime2,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,ModifiedBy,13,nvarchar,100,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,CompanyOwner,ModifiedAt,14,datetime2,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Country,Id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+﻿sqlserver,GreenCarpetsDb,dbo,Country,Id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Country,Iso,2,varchar,2,UNIQUE,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Country,Name,3,varchar,80,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Country,Iso3,4,varchar,3,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Country,NumCode,5,int,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Country,PhoneCode,6,int,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,CustomerTypeId,2,int,NULL,FOREIGN KEY,dbo,CustomerType,Id
-sqlserver,GreenCarpetsDb,dbo,Customer,FirstName,3,nvarchar,75,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,MiddleName,4,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,LastName,5,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,Address,6,nvarchar,250,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,PostalCode,7,nvarchar,20,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,City,8,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,Phone,9,nvarchar,20,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,Email,10,nvarchar,150,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,IsDeleted,11,bit,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,CreatedBy,12,nvarchar,100,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,CreatedAt,13,datetime2,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,ModifiedBy,14,nvarchar,100,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Customer,ModifiedAt,15,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,CustomerType,Id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,CustomerType,Name,2,nvarchar,50,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,CustomerType,Description,3,nvarchar,-1,NULL,NULL,NULL,NULL
@@ -112,22 +83,6 @@ sqlserver,GreenCarpetsDb,dbo,Branch,CreatedBy,10,nvarchar,100,NULL,NULL,NULL,NUL
 sqlserver,GreenCarpetsDb,dbo,Branch,CreatedAt,11,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Branch,ModifiedBy,12,nvarchar,100,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Branch,ModifiedAt,13,datetime2,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,BranchId,2,int,NULL,FOREIGN KEY,dbo,Branch,Id
-sqlserver,GreenCarpetsDb,dbo,Employee,DesignationId,3,int,NULL,FOREIGN KEY,dbo,Designation,Id
-sqlserver,GreenCarpetsDb,dbo,Employee,FirstName,4,nvarchar,75,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,MiddleName,5,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,LastName,6,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,Address,7,nvarchar,250,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,PostalCode,8,nvarchar,20,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,City,9,nvarchar,50,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,Phone,10,nvarchar,20,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,Email,11,nvarchar,150,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,IsDeleted,12,bit,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,CreatedBy,13,nvarchar,100,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,CreatedAt,14,datetime2,NULL,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,ModifiedBy,15,nvarchar,100,NULL,NULL,NULL,NULL
-sqlserver,GreenCarpetsDb,dbo,Employee,ModifiedAt,16,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Invoice,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Invoice,InvoiceTypeId,2,int,NULL,FOREIGN KEY,dbo,InvoiceType,Id
 sqlserver,GreenCarpetsDb,dbo,Invoice,InvoiceStatusTypeId,3,int,NULL,FOREIGN KEY,dbo,InvoiceStatusType,Id
@@ -153,6 +108,21 @@ sqlserver,GreenCarpetsDb,dbo,InvoiceStatusType,CreatedBy,5,nvarchar,100,NULL,NUL
 sqlserver,GreenCarpetsDb,dbo,InvoiceStatusType,CreatedAt,6,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,InvoiceStatusType,ModifiedBy,7,nvarchar,100,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,InvoiceStatusType,ModifiedAt,8,datetime2,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,FirstName,2,nvarchar,75,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,MiddleName,3,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,LastName,4,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Address,5,nvarchar,250,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,PostalCode,6,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,City,7,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Phone,8,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,Email,9,nvarchar,150,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,UserId,10,uniqueidentifier,NULL,FOREIGN KEY,dbo,WebUser,Id
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,IsDeleted,11,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,CreatedBy,12,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,CreatedAt,13,datetime2,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,ModifiedBy,14,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,CompanyOwner,ModifiedAt,15,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,InvoiceType,Id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,InvoiceType,Name,2,nvarchar,50,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,InvoiceType,Description,3,nvarchar,-1,NULL,NULL,NULL,NULL
@@ -185,6 +155,22 @@ sqlserver,GreenCarpetsDb,dbo,MM_SubscriptionServices,CreatedBy,9,nvarchar,100,NU
 sqlserver,GreenCarpetsDb,dbo,MM_SubscriptionServices,CreatedAt,10,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,MM_SubscriptionServices,ModifiedBy,11,nvarchar,100,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,MM_SubscriptionServices,ModifiedAt,12,datetime2,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,CustomerTypeId,2,int,NULL,FOREIGN KEY,dbo,CustomerType,Id
+sqlserver,GreenCarpetsDb,dbo,Customer,FirstName,3,nvarchar,75,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,MiddleName,4,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,LastName,5,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,Address,6,nvarchar,250,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,PostalCode,7,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,City,8,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,Phone,9,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,Email,10,nvarchar,150,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,UserId,11,uniqueidentifier,NULL,FOREIGN KEY,dbo,WebUser,Id
+sqlserver,GreenCarpetsDb,dbo,Customer,IsDeleted,12,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,CreatedBy,13,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,CreatedAt,14,datetime2,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,ModifiedBy,15,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Customer,ModifiedAt,16,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Order,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,Order,OrderTypeId,2,int,NULL,FOREIGN KEY,dbo,OrderType,Id
 sqlserver,GreenCarpetsDb,dbo,Order,CustomerId,3,bigint,NULL,FOREIGN KEY,dbo,Customer,Id
@@ -221,6 +207,23 @@ sqlserver,GreenCarpetsDb,dbo,PaymentCardType,CreatedBy,5,nvarchar,100,NULL,NULL,
 sqlserver,GreenCarpetsDb,dbo,PaymentCardType,CreatedAt,6,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,PaymentCardType,ModifiedBy,7,nvarchar,100,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,PaymentCardType,ModifiedAt,8,datetime2,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,BranchId,2,int,NULL,FOREIGN KEY,dbo,Branch,Id
+sqlserver,GreenCarpetsDb,dbo,Employee,DesignationId,3,int,NULL,FOREIGN KEY,dbo,Designation,Id
+sqlserver,GreenCarpetsDb,dbo,Employee,FirstName,4,nvarchar,75,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,MiddleName,5,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,LastName,6,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,Address,7,nvarchar,250,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,PostalCode,8,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,City,9,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,Phone,10,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,Email,11,nvarchar,150,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,UserId,12,uniqueidentifier,NULL,FOREIGN KEY,dbo,WebUser,Id
+sqlserver,GreenCarpetsDb,dbo,Employee,IsDeleted,13,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,CreatedBy,14,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,CreatedAt,15,datetime2,NULL,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,ModifiedBy,16,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,GreenCarpetsDb,dbo,Employee,ModifiedAt,17,datetime2,NULL,NULL,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,PaymentMethod,Id,1,bigint,NULL,PRIMARY KEY,NULL,NULL,NULL
 sqlserver,GreenCarpetsDb,dbo,PaymentMethod,CardTypeId,2,int,NULL,FOREIGN KEY,dbo,PaymentCardType,Id
 sqlserver,GreenCarpetsDb,dbo,PaymentMethod,CustomerId,3,bigint,NULL,FOREIGN KEY,dbo,Customer,Id
