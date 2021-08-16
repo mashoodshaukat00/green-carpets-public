@@ -409,9 +409,9 @@ CREATE TABLE [dbo].[BaseCompany](
 	[Email] [nvarchar](150) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK__BaseComp__3214EC07F1962EED] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -434,9 +434,9 @@ CREATE TABLE [dbo].[Branch](
 	[Phone] [nvarchar](20) NULL,
 	[Email] [nvarchar](150) NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK__Branch__3214EC07E7EACDDA] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -461,9 +461,9 @@ CREATE TABLE [dbo].[CompanyOwner](
 	[UserId] [uniqueidentifier] NOT NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK__CompanyO__3214EC0762E02F44] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -507,9 +507,9 @@ CREATE TABLE [dbo].[Customer](
 	[UserId] [uniqueidentifier] NOT NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK__Customer__3214EC0793A7AD12] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -527,9 +527,9 @@ CREATE TABLE [dbo].[CustomerType](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -553,9 +553,9 @@ CREATE TABLE [dbo].[DeliveryAddress](
 	[Longitude] [decimal](12, 9) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -577,9 +577,9 @@ CREATE TABLE [dbo].[DeliveryReport](
 	[IsActive] [bit] NOT NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -597,9 +597,9 @@ CREATE TABLE [dbo].[DeliveryStatusType](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -617,9 +617,9 @@ CREATE TABLE [dbo].[Designation](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -646,9 +646,9 @@ CREATE TABLE [dbo].[Employee](
 	[UserId] [uniqueidentifier] NOT NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK__Employee__3214EC078F921463] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -668,9 +668,9 @@ CREATE TABLE [dbo].[Invoice](
 	[TotalVat] [decimal](19, 4) NULL,
 	[TotalPaidAmount] [decimal](19, 4) NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -707,9 +707,9 @@ CREATE TABLE [dbo].[InvoiceStatusType](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -727,9 +727,9 @@ CREATE TABLE [dbo].[InvoiceType](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -745,15 +745,15 @@ CREATE TABLE [dbo].[MM_CustomerSubscription](
 	[Id] [bigint] IDENTITY(1,1) NOT NULL,
 	[CustomerId] [bigint] NULL,
 	[SubscriptionId] [bigint] NULL,
-	[StartDate] [datetime2](7) NOT NULL,
-	[ExpiryDate] [datetime2](7) NOT NULL,
+	[StartDate] [datetime] NOT NULL,
+	[ExpiryDate] [datetime] NOT NULL,
 	[AutoRenewal] [bit] NOT NULL,
 	[IsActive] [bit] NOT NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK_MM_CustomerSubscription] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -769,15 +769,15 @@ CREATE TABLE [dbo].[MM_SubscriptionServices](
 	[Id] [bigint] IDENTITY(1,1) NOT NULL,
 	[ServiceId] [int] NULL,
 	[SubscriptionId] [bigint] NULL,
-	[StartDate] [datetime2](7) NOT NULL,
-	[ExpiryDate] [datetime2](7) NOT NULL,
+	[StartDate] [datetime] NOT NULL,
+	[ExpiryDate] [datetime] NOT NULL,
 	[AutoRenewal] [bit] NOT NULL,
 	[IsActive] [bit] NOT NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK_MM_SubscriptionServices] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -800,9 +800,9 @@ CREATE TABLE [dbo].[Order](
 	[DeliveryAddressId] [bigint] NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -839,9 +839,9 @@ CREATE TABLE [dbo].[OrderType](
 	[Description] [nvarchar](250) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -859,9 +859,9 @@ CREATE TABLE [dbo].[PaymentCardType](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -878,13 +878,13 @@ CREATE TABLE [dbo].[PaymentMethod](
 	[CardTypeId] [int] NOT NULL,
 	[CustomerId] [bigint] NOT NULL,
 	[CatdNumber] [int] NULL,
-	[CardExpiredAt] [datetime2](7) NULL,
+	[CardExpiredAt] [datetime] NULL,
 	[Cvc] [varchar](5) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -908,9 +908,9 @@ CREATE TABLE [dbo].[Product](
 	[ProfitMargin] [decimal](19, 4) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -928,9 +928,9 @@ CREATE TABLE [dbo].[ProductCategory](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -948,9 +948,9 @@ CREATE TABLE [dbo].[Role](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -968,9 +968,9 @@ CREATE TABLE [dbo].[Service](
 	[Description] [nvarchar](max) NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -993,9 +993,9 @@ CREATE TABLE [dbo].[Subscription](
 	[IsActive] [bit] NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -1075,13 +1075,13 @@ CREATE TABLE [dbo].[WebUser](
 	[Email] [nvarchar](50) NULL,
 	[IsUserActive] [bit] NOT NULL,
 	[IsUserLocked] [bit] NOT NULL,
-	[UserLocketAt] [datetime2](7) NULL,
-	[LastLoginTime] [datetime2](7) NULL,
+	[UserLocketAt] [datetime] NULL,
+	[LastLoginTime] [datetime] NULL,
 	[IsDeleted] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NULL,
-	[CreatedAt] [datetime2](7) NULL,
+	[CreatedAt] [datetime] NULL,
 	[ModifiedBy] [nvarchar](100) NULL,
-	[ModifiedAt] [datetime2](7) NULL,
+	[ModifiedAt] [datetime] NULL,
  CONSTRAINT [PK__WebUser__3214EC077F456589] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
