@@ -11,7 +11,7 @@
 
 **Use Case Diagram :** 
 
-![use-case-diagram-plantuml](D:\Repo-Private\green-carpets\documentation\design-and-analysis\use-case-diagram-plantuml.png)
+![use-case-diagram-plantuml](documentation/design-and-analysis/use-case-diagram-plantuml.png)
 
 
 
@@ -19,14 +19,14 @@
 
 **Domain Class Model :**
 
-![domain-class-model](documentation/design-and-analysis\domain-class-model.png)
+![domain-class-model](documentation/design-and-analysis/domain-class-model.png)
 
 **Entity Relationship Diagram (ERD):**
 
 
 
-![erd](documentation\design-and-analysis\erd.svg)
+![erd](documentation/design-and-analysis/erd.svg)
 
- [entity-relationship-diagram.pdf](documentation\design-and-analysis\entity-relationship-diagram.pdf) 
+ [entity-relationship-diagram.pdf](documentation/design-and-analysis/entity-relationship-diagram.pdf) 
 
 https://lucid.app/lucidchart/5156cb08-613f-4ea8-965e-4b86f23a14f3/edit?page=p~O4IXituQhc#
