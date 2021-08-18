@@ -30,11 +30,11 @@ Who Do We Serve?
 
 We lend our services to private, business and wholesale customers. We have designed different subscriptions to cater the needs of all the customers. Our services can also be availed without subscription but with separate prices. 
 
-Our Competitive Advantage 
+Our Competitive Advantage:
 
 The services we are offering to our customers are incomparable. None of our competitors are offering cleaning, delivering and replacement of carpets in a single subscription. 
 
-Time Scale 
+Time Scale: 
 
 We as a company are putting all our efforts in this project and it’s expected to complete at the end of September. 
 
