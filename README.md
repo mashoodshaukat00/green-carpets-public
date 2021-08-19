@@ -1,5 +1,9 @@
 # Green Carpets 
 
+Wisdom?
+
+![Jokes Card](https://readme-jokes.vercel.app/api)
+
 **Introduction**
 
 * We offer new and used carpet leasing services to our customers through different subscriptions.
