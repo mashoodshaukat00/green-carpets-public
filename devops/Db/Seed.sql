@@ -55,6 +55,10 @@ VALUES (1, 'admin', 'xadminx', '004797114636', 'mashoodshaukat00@gmail.com', 1, 
         NULL, NULL);
 GO
 
+
+--- OrderType
+
+
 INSERT INTO dbo.OrderType (Name,
                            Description,
                            IsDeleted,
@@ -222,3 +226,54 @@ VALUES ('Admin', '', 0, 'System', GETDATE(), NULL, NULL),
        ('Saleman', '', 0, 'System', GETDATE(), NULL, NULL),
        ('Driver', '', 0, 'System', GETDATE(), NULL, NULL);
 GO
+
+
+--- ProductCategory
+
+
+INSERT INTO [dbo].[ProductCategory]([Name],
+									[Description],
+						            [IsDeleted],
+								    [CreatedBy],
+								    [CreatedAt],
+								    [ModifiedBy],
+								    [ModifiedAt])
+VALUES  ('Oriental(NEW)','carpets hand knotted only in Asia', 0, 'System', GETDATE(), NULL, NULL),
+		('Oriental(USED)','carpets hand knotted only in Asia', 0, 'System', GETDATE(), NULL, NULL),
+		('Modern(NEW)','Styles stiched by machines', 0, 'System', GETDATE(), NULL, NULL),
+		('Modern(USED)','Styles stiched by machines', 0, 'System', GETDATE(), NULL, NULL);
+
+GO
+
+
+--- Service
+
+
+
+INSERT INTO [dbo].[Service]([Name]
+						   ,[Description]
+						   ,[IsDeleted]
+						   ,[CreatedBy]
+						   ,[CreatedAt]
+						   ,[ModifiedBy]
+						   ,[ModifiedAt])
+VALUES	('Cleaning', 'Cleaning of carpets periodically', 0, 'System', GETDATE(), NULL, NULL),
+		('Repairing', 'Repair carpets when required', 0, 'System', GETDATE(), NULL, NULL),
+		('Replacement', 'Replacement of carpets on demand or at renewal of subscription', 0, 'System', GETDATE(), NULL, NULL),
+		('Delivery', 'Free delivery to our subscribed customers. May charge individual customers', 0, 'System', GETDATE(), NULL, NULL);
+GO
+
+--- SubscriptionType
+
+
+INSERT INTO [dbo].[SubscriptionType]([Name]
+								    ,[IsDailySubscription]
+								    ,[IsMonthlySubscription]
+								    ,[IsYearlySubscription])
+VALUES	('Silver', 0, 0, 1),
+		('Gold', 0, 0, 1),
+		('Diamond', 0, 0, 1);
+GO
+
+
+
