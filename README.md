@@ -74,3 +74,7 @@ We as a company are putting all our efforts in this project and it’s expected 
 https://lucid.app/lucidchart/5156cb08-613f-4ea8-965e-4b86f23a14f3/edit?page=p~O4IXituQhc#
 
 ---
+
+![Mashood's Stats](https://github-readme-stats.vercel.app/api?username=mashoodshaukat00&show_icons=true)
+
+![Shoaib's Stats](https://github-readme-stats.vercel.app/api?username=mshoaibtalha&show_icons=true)
