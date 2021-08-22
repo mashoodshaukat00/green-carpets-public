@@ -94,7 +94,7 @@ ALTER TABLE [dbo].[Subscription] DROP CONSTRAINT [DF__Subscript__IsAct__0E6E26BF
 GO
 ALTER TABLE [dbo].[Service] DROP CONSTRAINT [DF__Service__IsDelet__0D7A0286]
 GO
-ALTER TABLE [dbo].[Role] DROP CONSTRAINT [DF__Role__IsDeleted__0C85DE4D]
+ALTER TABLE [dbo].[WebUserRole] DROP CONSTRAINT [DF__Role__IsDeleted__0C85DE4D]
 GO
 ALTER TABLE [dbo].[ProductCategory] DROP CONSTRAINT [DF__ProductCa__IsDel__0B91BA14]
 GO
@@ -213,9 +213,9 @@ GO
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Service]') AND type in (N'U'))
 DROP TABLE [dbo].[Service]
 GO
-/****** Object:  Table [dbo].[Role]    Script Date: 17/08/2021 6:23:53 pm ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Role]') AND type in (N'U'))
-DROP TABLE [dbo].[Role]
+/****** Object:  Table [dbo].[WebUserRole]    Script Date: 17/08/2021 6:23:53 pm ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[WebUserRole]') AND type in (N'U'))
+DROP TABLE [dbo].[WebUserRole]
 GO
 /****** Object:  Table [dbo].[ProductCategory]    Script Date: 17/08/2021 6:23:53 pm ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ProductCategory]') AND type in (N'U'))
@@ -868,12 +868,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Role]    Script Date: 17/08/2021 6:23:53 pm ******/
+/****** Object:  Table [dbo].[WebUserRole]    Script Date: 17/08/2021 6:23:53 pm ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[Role](
+CREATE TABLE [dbo].[WebUserRole](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [nvarchar](50) NULL,
 	[Description] [nvarchar](max) NULL,
@@ -1605,7 +1605,7 @@ ALTER TABLE [dbo].[Product] ADD  DEFAULT (getdate()) FOR [CreatedAt]
 GO
 ALTER TABLE [dbo].[ProductCategory] ADD  DEFAULT ((0)) FOR [IsDeleted]
 GO
-ALTER TABLE [dbo].[Role] ADD  DEFAULT ((0)) FOR [IsDeleted]
+ALTER TABLE [dbo].[WebUserRole] ADD  DEFAULT ((0)) FOR [IsDeleted]
 GO
 ALTER TABLE [dbo].[Service] ADD  DEFAULT ((0)) FOR [IsDeleted]
 GO
@@ -1805,7 +1805,7 @@ GO
 ALTER TABLE [dbo].[Vehicle] CHECK CONSTRAINT [FK_Vehicle_Branch]
 GO
 ALTER TABLE [dbo].[WebUser]  WITH CHECK ADD  CONSTRAINT [FK_WebUser_Role] FOREIGN KEY([RoleId])
-REFERENCES [dbo].[Role] ([Id])
+REFERENCES [dbo].[WebUserRole] ([Id])
 GO
 ALTER TABLE [dbo].[WebUser] CHECK CONSTRAINT [FK_WebUser_Role]
 GO

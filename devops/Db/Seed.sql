@@ -5,7 +5,7 @@ GO
 ---- Role
 
 
-INSERT INTO [dbo].[Role] ([Name],
+INSERT INTO [dbo].[WebUserRole] ([Name],
                           [Description],
                           [IsDeleted],
                           [CreatedBy],
