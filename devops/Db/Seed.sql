@@ -169,6 +169,13 @@ GO
 
 
 
+-- CompanyOwner
+
+DECLARE @companyOwnerUserId UNIQUEIDENTIFIER ;
+
+SELECT @companyOwnerUserId =wu.Id FROM dbo.WebUser wu JOIN dbo.WebUserRole r ON wu.RoleId=r.Id WHERE r.Name='CompanyOwner';
+
+
 INSERT INTO [dbo].[CompanyOwner] ([UserId],
                                   [FirstName],
                                   [MiddleName],
@@ -183,9 +190,10 @@ INSERT INTO [dbo].[CompanyOwner] ([UserId],
                                   [CreatedAt],
                                   [ModifiedBy],
                                   [ModifiedAt])
-VALUES ('67FC159A-02D0-4457-8322-1B3FF3298EA5', 'X', 'Company', 'Owner', 'Christian Michelsens Gate 15A', '0568',
+VALUES (@companyOwnerUserId, 'X', 'Company', 'Owner', 'Christian Michelsens Gate 15A', '0568',
         'Oslo', '123456789', 'owner@company.com', 0, 'System', GETDATE(), NULL, NULL);
 GO
+
 
 
 --- BaseCompany
