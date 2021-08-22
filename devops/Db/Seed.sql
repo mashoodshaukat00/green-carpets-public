@@ -5,7 +5,7 @@ GO
 ---- Role
 
 
-INSERT INTO [dbo].[Role] ([Name],
+INSERT INTO [dbo].[WebUserRole] ([Name],
                           [Description],
                           [IsDeleted],
                           [CreatedBy],
@@ -54,6 +54,10 @@ VALUES (1, 'admin', 'xadminx', '004797114636', 'mashoodshaukat00@gmail.com', 1, 
        (7, 'b2b', 'xb2bx', '004797114636', 'mashoodshaukat00@gmail.com', 1, 0, NULL, NULL, 0, 'System', GETDATE(),
         NULL, NULL);
 GO
+
+
+--- OrderType
+
 
 INSERT INTO dbo.OrderType (Name,
                            Description,
@@ -165,6 +169,13 @@ GO
 
 
 
+-- CompanyOwner
+
+DECLARE @companyOwnerUserId UNIQUEIDENTIFIER ;
+
+SELECT @companyOwnerUserId =wu.Id FROM dbo.WebUser wu JOIN dbo.WebUserRole r ON wu.RoleId=r.Id WHERE r.Name='CompanyOwner';
+
+
 INSERT INTO [dbo].[CompanyOwner] ([UserId],
                                   [FirstName],
                                   [MiddleName],
@@ -179,9 +190,10 @@ INSERT INTO [dbo].[CompanyOwner] ([UserId],
                                   [CreatedAt],
                                   [ModifiedBy],
                                   [ModifiedAt])
-VALUES ('67FC159A-02D0-4457-8322-1B3FF3298EA5', 'X', 'Company', 'Owner', 'Christian Michelsens Gate 15A', '0568',
+VALUES (@companyOwnerUserId, 'X', 'Company', 'Owner', 'Christian Michelsens Gate 15A', '0568',
         'Oslo', '123456789', 'owner@company.com', 0, 'System', GETDATE(), NULL, NULL);
 GO
+
 
 
 --- BaseCompany
@@ -222,3 +234,54 @@ VALUES ('Admin', '', 0, 'System', GETDATE(), NULL, NULL),
        ('Saleman', '', 0, 'System', GETDATE(), NULL, NULL),
        ('Driver', '', 0, 'System', GETDATE(), NULL, NULL);
 GO
+
+
+--- ProductCategory
+
+
+INSERT INTO [dbo].[ProductCategory]([Name],
+									[Description],
+						            [IsDeleted],
+								    [CreatedBy],
+								    [CreatedAt],
+								    [ModifiedBy],
+								    [ModifiedAt])
+VALUES  ('Oriental(NEW)','carpets hand knotted only in Asia', 0, 'System', GETDATE(), NULL, NULL),
+		('Oriental(USED)','carpets hand knotted only in Asia', 0, 'System', GETDATE(), NULL, NULL),
+		('Modern(NEW)','Styles stiched by machines', 0, 'System', GETDATE(), NULL, NULL),
+		('Modern(USED)','Styles stiched by machines', 0, 'System', GETDATE(), NULL, NULL);
+
+GO
+
+
+--- Service
+
+
+
+INSERT INTO [dbo].[Service]([Name]
+						   ,[Description]
+						   ,[IsDeleted]
+						   ,[CreatedBy]
+						   ,[CreatedAt]
+						   ,[ModifiedBy]
+						   ,[ModifiedAt])
+VALUES	('Cleaning', 'Cleaning of carpets periodically', 0, 'System', GETDATE(), NULL, NULL),
+		('Repairing', 'Repair carpets when required', 0, 'System', GETDATE(), NULL, NULL),
+		('Replacement', 'Replacement of carpets on demand or at renewal of subscription', 0, 'System', GETDATE(), NULL, NULL),
+		('Delivery', 'Free delivery to our subscribed customers. May charge individual customers', 0, 'System', GETDATE(), NULL, NULL);
+GO
+
+--- SubscriptionType
+
+
+INSERT INTO [dbo].[SubscriptionType]([Name]
+								    ,[IsDailySubscription]
+								    ,[IsMonthlySubscription]
+								    ,[IsYearlySubscription])
+VALUES	('Silver', 0, 0, 1),
+		('Gold', 0, 0, 1),
+		('Diamond', 0, 0, 1);
+GO
+
+
+
