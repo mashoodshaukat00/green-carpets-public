@@ -76,5 +76,3 @@ https://lucid.app/lucidchart/5156cb08-613f-4ea8-965e-4b86f23a14f3/edit?page=p~O4
 ---
 
 ![Mashood's Stats](https://github-readme-stats.vercel.app/api?username=mashoodshaukat00&show_icons=true)
-
-![Shoaib's Stats](https://github-readme-stats.vercel.app/api?username=mshoaibtalha&show_icons=true)
