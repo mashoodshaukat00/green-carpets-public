@@ -22,10 +22,10 @@ export default function Profile() {
           </div>
           {/* Background ends here */}
             <div
-              className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
+              className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-  h-70-px"
               style={{ transform: "translateZ(0)" }}>
               <svg
-                className="absolute bottom-0 overflow-hidden"
+                className="absolute bottom-0 overflow- "
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
                 version="1.1"
@@ -45,130 +45,46 @@ export default function Profile() {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
                 <div className="px-6 py-6">
                 <div className="flex flex-wrap justify-center">    
-                                {/* cart starts here */}
-                 <div className="container mx-auto mt-10">
-                  <div className="flex shadow-md my-10">
-                    <div className="w-3/4 bg-white px-10 py-10">
-                      <div className="flex justify-between border-b pb-8">
-                        <h1 className="font-semibold text-2xl">Shopping Cart</h1>
-                        <h2 className="font-semibold text-2xl">3 Items</h2>
-                      </div>
-                      <div className="flex mt-10 mb-5">
-                        <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
-                        <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Quantity</h3>
-                        <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Price</h3>
-                        <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Total</h3>
-                      </div>
-                      <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                        <div className="flex w-2/5">
-                          {/* <!-- product --> */}
-                          <div className="w-20">
-                            <img className="h-24" src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z" alt=""/>
-                          </div>
-                          <div className="flex flex-col justify-between ml-4 flex-grow">
-                            <span className="font-bold text-sm">Iphone 6S</span>
-                            <span className="text-red-500 text-xs">Apple</span>
-                            <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
-                          </div>
-                        </div>
-                        <div className="flex justify-center w-1/5">
-                          <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                          </svg>
-
-                          <input className="mx-2 border text-center w-8" type="text" value="1"/>          
-
-                          <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                          </svg>
-                        </div>
-                        <span className="text-center w-1/5 font-semibold text-sm">$400.00</span>
-                        <span className="text-center w-1/5 font-semibold text-sm">$400.00</span>
-                      </div>
-
-                      <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                        <div className="flex w-2/5">
-                          {/* <!-- product --> */}
-                          <div className="w-20">
-                            <img className="h-24" src="https://asset1-327a.kxcdn.com/w863986/DataImage.ashx/11113275/467/350" alt=""/>
-                          </div>
-                          <div className="flex flex-col justify-between ml-4 flex-grow">
-                            <span className="font-bold text-sm">Xiaomi Mi 20000mAh</span>
-                            <span className="text-red-500 text-xs">Xiaomi</span>
-                            <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
-                          </div>
-                        </div>
-                        <div className="flex justify-center w-1/5">
-                          <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                          </svg>
-                          <input className="mx-2 border text-center w-8" type="text" value="1"/>
-                          <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                          </svg>
-                        </div>
-                        <span className="text-center w-1/5 font-semibold text-sm">$40.00</span>
-                        <span className="text-center w-1/5 font-semibold text-sm">$40.00</span>
-                      </div>
-                      <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                        <div className="flex w-2/5">
-                          {/* <!-- product --> */}
-                          <div className="w-20">
-                            <img className="h-24" src="https://www.komplett.no/img/p/619/1126523.jpg" alt=""/>
-                          </div>
-                          <div className="flex flex-col justify-between ml-4 flex-grow">
-                            <span className="font-bold text-sm">Airpods</span>
-                            <span className="text-red-500 text-xs">Apple</span>
-                            <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
-                          </div>
-                        </div>
-                        <div className="flex justify-center w-1/5">
-                          <svg className="fill-current text-gray-600 w-3 cursor-auto" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                          </svg>
-                          <input className="mx-2 border text-center w-8" type="text" value="1"/>
-                          <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                          </svg>
-                        </div>
-                        <span className="text-center w-1/5 font-semibold text-sm">$150.00</span>
-                        <span className="text-center w-1/5 font-semibold text-sm">$150.00</span>
-                      </div>
-                      <a href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">                    
-                        <svg className="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
-                        Continue Shopping
-                      </a>
-                    </div>
-                    <div id="summary" className="w-1/4 px-8 py-10 bg-green-500">
-                      <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
-                      <div className="flex justify-between mt-10 mb-5">
-                        <span className="font-semibold text-sm uppercase">Items 3</span>
-                        <span className="font-semibold text-sm">590$</span>
-                      </div>
-                      <div>
-                        <label className="font-medium inline-block mb-3 text-sm uppercase">delivery</label>
-                        <select className="block p-2 text-gray-600 w-full text-sm">
-                          <option>Standard delivery - free</option>
-                          <option>Same day delivery - $20.00</option>
-                        </select>
-                      </div>
-                      <div className="py-10">
-                        <label for="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
-                        <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full"/>
-                      </div>
-                      <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
-                      <div className="flex justify-between mt-10 mb-5">
-                        <span className="font-semibold text-sm uppercase">VAT</span>
-                        <span className="font-semibold text-sm">30$</span>
-                      </div>
-                      <div className="border-t mt-8">
-                        <div className="flex font-semibold justify-between py-6 text-sm uppercase">
-                          <span>Total cost</span>
-                          <span>$620</span>
-                        </div>
-                        <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  {/* Cart ends here */}
+                  {/* shipping detail starts here */}
+                  {/* <!-- component --> */}
+<div className="leading-loose">
+  <form className="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
+    <p className="text-gray-800 font-medium">Customer information</p>
+    <div className="">
+      <label className="block text-sm text-gray-00" for="cus_name">Name</label>
+      <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Your Name" aria-label="Name"/>
+    </div>
+    <div className="mt-2">
+      <label className="block text-sm text-gray-600" for="cus_email">Email</label>
+      <input className="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Your Email" aria-label="Email"/>
+    </div>
+    <div className="mt-2">
+      <label className=" block text-sm text-gray-600" for="cus_email">Address</label>
+      <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Street" aria-label="Email"/>
+    </div>
+    <div className="mt-2">
+      <label className="  text-sm block text-gray-600" for="cus_email">City</label>
+      <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="City" aria-label="Email"/>
+    </div>
+    <div className="inline-block mt-2 w-1/2 pr-1">
+      <label className="  block text-sm text-gray-600" for="cus_email">Country</label>
+      <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Country" aria-label="Email"/>
+    </div>
+    <div className="inline-block mt-2 -mx-1 pl-1 w-1/2">
+      <label className="  block text-sm text-gray-600" for="cus_email">Zip</label>
+      <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email"  name="cus_email" type="text" required="" placeholder="Zip" aria-label="Email"/>
+    </div>
+    <p className="mt-4 text-gray-800 font-medium">Payment information</p>
+    <div className="">
+      <label className="block text-sm text-gray-600" for="cus_name">Card</label>
+      <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Card Number MM/YY CVC" aria-label="Name"/>
+    </div>
+    <div className="mt-4">
+      <button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">$3.00</button>
+    </div>
+  </form>
+</div>
+                  {/* Shipping detail ends here */}
               </div>
             </div>
           </div>
