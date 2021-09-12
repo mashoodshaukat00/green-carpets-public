@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+
 
 export default function Profile() {
   return (
@@ -47,10 +49,10 @@ export default function Profile() {
                  <div className="flex flex-wrap justify-center">    
                  {/* Product detail starts here */}
                  <section className="text-gray-700 body-font overflow-hidden bg-white">
+                 
                   <div className="container px-5 py-24 mx-auto">
-                   <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-10 mt-10">                    
-                    <svg className="fill-current mr-2 text-blueGray-800 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
-                        Back
+                   <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-10 mt-10"> 
+                   <Link to="/browseProduct" >Back </Link>
                    </a>
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                       <img alt="ecommerce" className="lg:w-1/2 object-cover object-center rounded border border-gray-200" src="https://www.rugvista.no/image/desk_pdp_zoom/352769.jpg"/>

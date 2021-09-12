@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
@@ -47,6 +48,7 @@ export default function Profile() {
                 <div className="flex flex-wrap justify-center">    
                                 {/* cart starts here */}
                  <div className="container mx-auto mt-10">
+                 <Link className="text-black bold" to="/productDetail" >Back </Link>
                   <div className="flex shadow-md my-10">
                     <div className="w-3/4 bg-white px-10 py-10">
                       <div className="flex justify-between border-b pb-8">

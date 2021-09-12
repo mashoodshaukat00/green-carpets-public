@@ -101,6 +101,14 @@ export default function Profile() {
                                   <div  className="px-4 py-2 font-semibold">Birthday</div>
                                   <div  className="px-4 py-2">Feb 06, 1998</div>
                               </div>
+                              <div  className="grid grid-cols-2">
+                                  <div  className="px-4 py-2 font-semibold">Member Since</div>
+                                  <div  className="px-4 py-2">Sep 17, 2020</div>
+                              </div>
+                              <div  className="grid grid-cols-2">
+                                  <div  className="px-4 py-2 font-semibold">Designation</div>
+                                  <div  className="px-4 py-2">Manager</div>
+                              </div>
                           </div>
                       </div>                    
                   </div>

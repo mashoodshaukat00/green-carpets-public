@@ -17,6 +17,14 @@ import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 
+import BrowseProduct from "views/browseProduct";
+import ProductDetail from "views/productDetail";
+import Cart from "views/cart";
+import Checkout from "views/Checkout";
+import ProfilePage from "views/ProfilePage";
+
+
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -26,7 +34,13 @@ ReactDOM.render(
       {/* add routes without layouts */}
       <Route path="/landing" exact component={Landing} />
       <Route path="/profile" exact component={Profile} />
-      <Route path="/" exact component={Index} />
+      
+      <Route path="/" exact component={BrowseProduct} />
+      <Route path="/browseProduct" exact component={BrowseProduct} />
+      <Route path="/productDetail" exact component={ProductDetail} />
+      <Route path="/cart" exact component={Cart} />
+      <Route path="/Checkout" exact component={Checkout} />
+      <Route path="/ProfilePage" exact component={ProfilePage} />
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
     </Switch>
