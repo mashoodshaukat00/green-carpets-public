@@ -5,7 +5,7 @@ import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
 
-export default function Profile() {
+export default function ProductDetail() {
   return (
     <>
       <Navbar transparent />
@@ -107,8 +107,12 @@ export default function Profile() {
                         </div>
                         <div className="flex mt-16">
                           <span className="title-font font-medium text-2xl text-gray-900">$580.00</span>
-                          <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add to Cart</button>
-                          <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Continue Shopping</button>
+                          <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                          <Link to="cart"> Add to Cart </Link>
+                            </button>
+                          <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                          <Link to="browseProduct"> Continue Shopping </Link>
+                            </button>
                         </div>
                       </div>
                     </div>

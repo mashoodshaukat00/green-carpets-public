@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
-export default function Profile() {
+export default function Checkout() {
   return (
     <>
       <Navbar transparent />
@@ -92,7 +92,11 @@ export default function Profile() {
                         <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email"  name="cus_email" type="text" required="" placeholder="CVC" aria-label="Email"/>
                       </div>
                       <div className="mt-4">
-                      <button className="w-full ml-auto inline-block text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Pay $580.00</button>
+                      <Link to="OrderComplete">
+                        <button className="w-full ml-auto inline-block text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                           Pay $580.00                         
+                        </button>
+                      </Link>
                       </div>
                     
                     </form>

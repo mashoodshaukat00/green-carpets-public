@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+// import { Link } from "heroicons-react";
 
-export default function Profile() {
+export default function BrowseProduct() {
   return (
     <>
       <Navbar transparent />
@@ -58,13 +60,15 @@ export default function Profile() {
 
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
-                          <a href="#">
-                              <img alt="Placeholder" className="block h-auto w-2" src="https://picsum.photos/600/400/?random"/>
+                         <Link to="productDetail">
+                          <a href="#">                            
+                              <img alt="Placeholder" className="block h-auto w-60" src="https://picsum.photos/600/400/?random"/>                              
                           </a>
+                          </Link>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
-                                <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <a className="no-underline hover:underline text-black">
+                                <Link to="productDetail">Product Title</Link>                                    
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -79,17 +83,19 @@ export default function Profile() {
                             </a>                            
                         </footer>                        
                           <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                            <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                            <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                               <span className="m-auto text-2xl font-thin">+</span>
                             </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                            Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -110,12 +116,14 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                            </Link>
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -130,17 +138,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -160,12 +170,15 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                             </Link>
+                              
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -180,17 +193,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -212,12 +227,15 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          </Link>
+                             
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -232,17 +250,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -254,19 +274,22 @@ export default function Profile() {
                       </span>
                     </div>
                     <div className="w-full px-4 flex-1">
-                      <span className="text-sm block my-4 p-3 text-blueGray-700 rounded border border-solid border-blueGray-100"> {/* card starts here */}
+                      <span className="text-sm block my-4 p-3 text-blueGray-700 rounded border border-solid border-blueGray-100">
+                         {/* card starts here */}
                         {/* <!-- Column --> */}
                         <div className="my-1 px-1 w-full flex-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 pl-2">
 
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          </Link>                              
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -281,17 +304,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -310,12 +335,14 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -330,19 +357,20 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
-                        </article>
-
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
+                      </article>
                         {/* <!-- END Article --> */}
 
                         </div>
@@ -362,12 +390,14 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -382,17 +412,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -413,12 +445,14 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -433,17 +467,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
@@ -463,12 +499,14 @@ export default function Profile() {
                          {/* <!-- Article --> */}
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
-                              <img alt="Placeholder" className="block h-auto  w-2" src="https://picsum.photos/600/400/?random"/>
+                          <Link to="productDetail">
+                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                    Product Title
+                                <Link to="productDetail"> Product Title </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -483,17 +521,19 @@ export default function Profile() {
                             </a>                            
                         </footer>
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent px-4 mt-1 mb-5">
-                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                            <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
                             <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
-                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
                         </div>
-                        <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          Buy
-                        </button>
+                        <Link to="cart">
+                          <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                             Buy 
+                          </button>
+                        </Link>
                         </article>
 
                         {/* <!-- END Article --> */}
