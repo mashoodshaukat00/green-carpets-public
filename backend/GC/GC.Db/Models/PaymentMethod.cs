@@ -10,7 +10,7 @@ namespace GC.Db.Models
         public long Id { get; set; }
         public int CardTypeId { get; set; }
         public long CustomerId { get; set; }
-        public int? CatdNumber { get; set; }
+        public string CardNumber { get; set; }
         public DateTime? CardExpiredAt { get; set; }
         public string Cvc { get; set; }
         public bool IsDeleted { get; set; }

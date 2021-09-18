@@ -35,9 +35,14 @@ namespace GC.WebApi
         {
             var connectionString = this.Configuration.GetConnectionString("DbConnection");
 
-            services.AddDbContext<GreenCarpetsDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<GreenCarpetsDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(connectionString));
+
+            services.AddCors();
 
             services.AddTransient<ProductService>();
+            services.AddTransient<CompanyService>();
+            services.AddTransient<OrderService>();
+            services.AddTransient<UserService>();
 
             services.AddHealthChecksUI().AddInMemoryStorage();
 
@@ -71,6 +76,13 @@ namespace GC.WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .SetIsOriginAllowed(origin => true) // allow any origin
+               .AllowCredentials()); // allow credentials
+
 
             app.UseAuthorization();
 

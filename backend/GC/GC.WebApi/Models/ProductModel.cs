@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GC.WebApi.Models
 {
-    public class ProductModel
+    public class ProductModel : ModelBase
     {
         public ProductModel()
         {
@@ -38,7 +38,5 @@ namespace GC.WebApi.Models
         public int Quantity { get; set; }
 
         public decimal? Price { get; set; }
-
-        public DateTime FetchedAt => System.DateTime.UtcNow;
     }
 }

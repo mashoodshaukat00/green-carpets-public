@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GC.WebApi.Models
 {
-    public class CustomerModel
+    public class CustomerModel : ModelBase
     {
     }
 }
