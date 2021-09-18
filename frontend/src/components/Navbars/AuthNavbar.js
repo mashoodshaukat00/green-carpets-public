@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // components
 
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
+import IndexDropdown from "components/Dropdowns/IndexDropdown";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -32,52 +33,31 @@ export default function Navbar(props) {
               "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
               (navbarOpen ? " block rounded shadow-lg" : " hidden")
             }
-            id="example-navbar-warning"
-          >
-            {/* <ul className="flex flex-col lg:flex-row list-none mr-auto">
-              <li className="flex items-center">
-                <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-auth-navbar"
-                >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  Docs
-                </a>
-              </li>
-            </ul> */}
+            id="example-navbar-warning">           
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
-                {/* <PagesDropdown /> */}
+              <li className="flex items-center lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 text-xs uppercase font-bold">
+                {/* PagesDropdown  */}
+                {/* <IndexDropdown /> */}
+                <Link to="ProfilePage"> Profile </Link>
               </li>
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-react%2F%23%2F"
-                  target="_blank"
-                >
-                  {/* <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg " /> */}
-                  <span className=" inline-block ml-2">Products</span>
+                  target="_blank">                 
+                  <span className=" inline-block ml-2"><Link to="/browseProduct">Products</Link></span>
                 </a>
               </li>
-
               <li className="flex items-center">
                 <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-react%2F%23%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20React%20UI%20Kit%20and%20Admin.%20Let%20Notus%20React%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level.%20"
-                  target="_blank"
-                >
-                  {/* <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg " /> */}
-                  <span className="inline-block ml-2">Subscriptions</span>
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">                  
+                  <span className="inline-block ml-2"><Link to="/Subscription">Subscriptions</Link></span>
                 </a>
               </li>
-
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://github.com/creativetimofficial/notus-react?ref=nr-auth-navbar"
-                  target="_blank"
-                >
-                  {/* <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg " /> */}
+                  target="_blank">                 
                   <span className="inline-block ml-2">About us</span>
                 </a>
               </li>
@@ -85,24 +65,35 @@ export default function Navbar(props) {
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://github.com/creativetimofficial/notus-react?ref=nr-auth-navbar"
-                  target="_blank"
-                >
+                  target="_blank">
                   <i className="lg:text-blueGray-200 text-blueGray-400 fas fa-search text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">About us</span>
                 </a>
               </li>
-
               <li className="flex items-center">
-                <button
+              <Link
+          to="/auth/login"
+          className="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+        >
+          Login
+        </Link>
+        <Link
+          to="/auth/register"
+          className="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+          type="button"
+        >
+          Register
+        </Link>
+                {/* <button
                   className="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button">
                    Sign in
-                </button>
-                <button
+                </button> */}
+                {/* <button
                   className="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button">
                    Signup
-                </button>
+                </button> */}
               </li>
             </ul>
           </div>
