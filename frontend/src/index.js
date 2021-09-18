@@ -24,6 +24,7 @@ import Checkout from "views/Checkout";
 import ProfilePage from "views/ProfilePage";
 import HomePage from "views/HomePage";
 import OrderComplete from "views/OrderComplete";
+import Subscription from "views/Subscription";
 
 
 
@@ -45,6 +46,7 @@ ReactDOM.render(
       <Route path="/ProfilePage" exact component={ProfilePage} />
       <Route path="/HomePage" exact component={HomePage} />
       <Route path="/OrderComplete" exact component={OrderComplete} />
+      <Route path="/Subscription" exact component={Subscription} />
       {/* add redirect for first page */}
       <Redirect from="*" to="/" />
     </Switch>

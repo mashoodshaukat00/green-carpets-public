@@ -62,7 +62,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                          <Link to="productDetail">
                           <a href="#">                            
-                              <img alt="Placeholder" className="block h-auto w-60" src="https://picsum.photos/600/400/?random"/>                              
+                              <img alt="Placeholder" className="block h-auto w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>                              
                           </a>
                           </Link>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
@@ -117,7 +117,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                             </Link>
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
@@ -171,7 +171,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                              </Link>
                               
                           </a>
@@ -228,7 +228,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                           </Link>
                              
                           </a>
@@ -283,7 +283,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                           </Link>                              
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
@@ -336,7 +336,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto w-60 rounded mx-auto" src="https://picsum.photos/600/400/?random"/>
                           </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
@@ -360,7 +360,7 @@ export default function BrowseProduct() {
                             <button data-action="decrement" className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-l cursor-pointer outline-none">
                               <span className="m-auto text-2xl font-thin">−</span>
                             </button>
-                            <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"/>
+                            <input type="number" className="focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700 outline-none" name="custom-input-number" value="0"/>
                           <button data-action="increment" className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-600 rounded-r cursor-pointer">
                             <span className="m-auto text-2xl font-thin">+</span>
                           </button>
@@ -391,7 +391,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                           </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
@@ -446,7 +446,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                           </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
@@ -500,7 +500,7 @@ export default function BrowseProduct() {
                          <article className="overflow-hidden rounded-lg shadow-lg">
                           <a href="#">
                           <Link to="productDetail">
-                          <img alt="Placeholder" className="block h-auto  w-60" src="https://picsum.photos/600/400/?random"/>
+                          <img alt="Placeholder" className="block h-auto  w-60 mx-auto rounded" src="https://picsum.photos/600/400/?random"/>
                           </Link> 
                           </a>
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">

@@ -37,7 +37,8 @@ export default function Navbar(props) {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 text-xs uppercase font-bold">
                 {/* PagesDropdown  */}
-                <IndexDropdown />
+                {/* <IndexDropdown /> */}
+                <Link to="ProfilePage"> Profile </Link>
               </li>
               <li className="flex items-center">
                 <a
@@ -49,7 +50,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">                  
-                  <span className="inline-block ml-2">Subscriptions</span>
+                  <span className="inline-block ml-2"><Link to="/Subscription">Subscriptions</Link></span>
                 </a>
               </li>
               <li className="flex items-center">
