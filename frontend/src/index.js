@@ -20,7 +20,7 @@ import Auth from "layouts/Auth.js";
 import BrowseProduct from "views/browseProduct";
 import ProductDetail from "views/productDetail";
 import Cart from "views/cart";
-import Checkout from "views/Checkout";
+import Checkout from "views/checkout";
 import ProfilePage from "views/ProfilePage";
 import HomePage from "views/HomePage";
 import OrderComplete from "views/OrderComplete";
