@@ -21,7 +21,7 @@ import BrowseProduct from "views/browseProduct";
 import ProductDetail from "views/productDetail";
 import Cart from "views/cart";
 import Checkout from "views/checkout";
-import ProfilePage from "views/ProfilePage";
+import Profile from "views/Profile";
 import HomePage from "views/HomePage";
 import OrderComplete from "views/OrderComplete";
 import Subscription from "views/Subscription";
@@ -43,7 +43,7 @@ ReactDOM.render(
       <Route path="/productDetail" exact component={ProductDetail} />
       <Route path="/cart" exact component={Cart} />
       <Route path="/Checkout" exact component={Checkout} />
-      <Route path="/ProfilePage" exact component={ProfilePage} />
+      <Route path="/Profile" exact component={Profile} />
       <Route path="/HomePage" exact component={HomePage} />
       <Route path="/OrderComplete" exact component={OrderComplete} />
       <Route path="/Subscription" exact component={Subscription} />

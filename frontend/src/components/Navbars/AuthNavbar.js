@@ -38,7 +38,7 @@ export default function Navbar(props) {
               <li className="flex items-center lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 text-xs uppercase font-bold">
                 {/* PagesDropdown  */}
                 {/* <IndexDropdown /> */}
-                <Link to="ProfilePage"> Profile </Link>
+                <Link to="Profile"> Profile </Link>
               </li>
               <li className="flex items-center">
                 <a
