@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from "react-router-dom";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
@@ -6,10 +7,26 @@ import Footer from "components/Footers/Footer.js";
 // import { Link } from "heroicons-react";
 
 export default function BrowseProduct() {
+  const [data, setData] = useState([]);
+  useEffect(async () => {
+    const fetchData = async () => {
+      const result = await axios(
+        'https://localhost:44391/api/Products/GetProducts',
+      );
+ 
+      setData(result.data);
+      console.log(result.data);
+    };
+ 
+    fetchData();
+  }, []);
+
   return (
     <>
+    {data.map((product)=>{
+     return <>
       <Navbar transparent />
-      <main className="profile-page">
+      <main className="profile-page" key={product.id}>
         <section className="relative block h-500-px">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
@@ -68,7 +85,7 @@ export default function BrowseProduct() {
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black">
-                                <Link to="productDetail">Product Title</Link>                                    
+                                <Link to="productDetail">{product.name}</Link>                                    
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -78,7 +95,7 @@ export default function BrowseProduct() {
                         <footer className="flex items-center justify-between leading-none p-4 md:p-4">
                             <a className="flex items-center no-underline hover:underline text-black" href="#">                                
                                 <p className="  text-sm">
-                                    Description:Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                    {product.description}
                                 </p>
                             </a>                            
                         </footer>                        
@@ -123,7 +140,7 @@ export default function BrowseProduct() {
                         <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                             <h1 className="text-lg">
                                 <a className="no-underline hover:underline text-black" href="#">
-                                <Link to="productDetail"> Product Title </Link>
+                                <Link to="productDetail"> {product.name} </Link>
                                 </a>
                             </h1>
                             <p className="text-grey-darker text-sm">
@@ -554,6 +571,9 @@ export default function BrowseProduct() {
       </section>
     </main>
     <Footer />
+      </>
+    })}
+      
     </>
   );
 }
