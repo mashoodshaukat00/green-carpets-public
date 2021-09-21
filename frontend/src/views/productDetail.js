@@ -1,47 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Section from "./Section";
 
 
 export default function ProductDetail() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch('https://localhost:44391/api/Products/GetProducts')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <Navbar transparent />
       <main className="profile-page">
-        <section className="relative block h-500-px">
-          <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
-            }}>
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-50 bg-black">                
-            </span>
-          </div>
-          {/* Background ends here */}
-            <div
-              className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-              style={{ transform: "translateZ(0)" }}>
-              <svg
-                className="absolute bottom-0 overflow-hidden"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-                version="1.1"
-                viewBox="0 0 2560 100"
-                x="0"
-                y="0">
-                <polygon
-                  className="text-blueGray-200 fill-current"
-                  points="2560 0 2560 100 0 100">
-                </polygon>
-              </svg>
-            </div>
-            {/* background bottom ends here */}
-          </section>
+        <Section />
             <section className="relative py-16 bg-blueGray-200">
               <div className=" mx-auto px-4">
                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
@@ -49,8 +30,8 @@ export default function ProductDetail() {
                  <div className="flex flex-wrap justify-center">    
                  {/* Product detail starts here */}
                  <section className="text-gray-700 body-font overflow-hidden bg-white">
-                 
-                  <div className="container px-5 py-24 mx-auto">
+                 {data.map((product)=>(
+                   <div className="container px-5 py-24 mx-auto">
                    <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-10 mt-10"> 
                    <Link to="/browseProduct" >Back </Link>
                    </a>
@@ -58,7 +39,7 @@ export default function ProductDetail() {
                       <img alt="ecommerce" className="lg:w-1/2 object-cover object-center rounded border border-gray-200" src="https://www.rugvista.no/image/desk_pdp_zoom/352769.jpg"/>
                       <div className="lg:w-1/2 lg:pl-10 pl-24 lg:py-6 mt-6 lg:mt-0">
                         <h2 className="text-sm title-font text-gray-500 tracking-widest">House Of Carpets</h2>
-                        <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">Tradition of Persia</h1>
+                        <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.name}</h1>
                         <div className="flex mb-4">
                           <span className="flex items-center">
                             <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-red-500" viewBox="0 0 24 24">
@@ -96,7 +77,7 @@ export default function ProductDetail() {
                             </a>
                           </span>
                         </div>
-                        <p className="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+                        <p className="leading-relaxed h-20">{product.description}</p>
                         <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                           <div className="flex">
                             <span className="mr-3">Color</span>
@@ -117,6 +98,8 @@ export default function ProductDetail() {
                       </div>
                     </div>
                   </div>
+                 ))}
+                  
                 </section>
                  {/* Product detail ends here */}
               </div>
