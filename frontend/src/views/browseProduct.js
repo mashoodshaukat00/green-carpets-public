@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from "react-router-dom";
-import ProductDetail from "./productDetail.js";
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
+import ProductDetail from "./ProductDetail.js";
 import Section from "./Section";
 // import { Link } from "heroicons-react";
 
@@ -22,7 +19,6 @@ export default function BrowseProduct() {
 
   return (
     <>
-    <Navbar transparent />
       <main className="profile-page">
       <Section />
           <section className="relative py-16 bg-blueGray-200">
@@ -36,7 +32,7 @@ export default function BrowseProduct() {
                     {data.map(product =>(
                       <div key={product.id} className="my-2 px-2 w-1/3 py-6 overflow-hidden sm:w-full md:my-1 md:px-1 md:w-full lg:my-2 lg:px-2 lg:w-1/3 xl:my-2 xl:px-2 xl:w-1/3">
                       <article className="overflow-hidden rounded-lg shadow-lg border-2 border-solid border-gray-300 pt-6">
-                              <Link to="productDetail">
+                              <Link to="/ProductDetail">
                                 <a href="#">                            
                                   <img alt="Placeholder" className="block h-auto w-65 px-4 mx-auto rounded-lg" src="https://picsum.photos/600/400/?random"/>
                                 </a>
@@ -44,7 +40,7 @@ export default function BrowseProduct() {
                             <header className="flex items-center justify-between leading-tight p-4 md:p-4">
                                 <h1 className="text-lg">
                                     <a className="no-underline hover:underline text-black">
-                                    <Link to="productDetail">{product.name}</Link>                                    
+                                    <Link to="/ProductDetail">{product.name}</Link>                                    
                                     </a>
                                 </h1>
                                 <p className="text-red-500 text-sm">
@@ -65,7 +61,7 @@ export default function BrowseProduct() {
                                   <span className="m-auto text-2xl font-thin">+</span>
                                 </button>
                             </div>
-                            <Link to="cart">
+                            <Link to="/Cart">
                               <button className="flex ml-auto mx-auto mb-4 justify-center text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                                 Buy 
                               </button>
@@ -82,7 +78,6 @@ export default function BrowseProduct() {
         </div>
       </section>
     </main>
-  <Footer />
     </>
   );
 }

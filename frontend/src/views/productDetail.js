@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 import Section from "./Section";
-
 
 export default function ProductDetail() {
   const [data, setData] = useState([]);
@@ -20,7 +16,6 @@ export default function ProductDetail() {
   }, []);
   return (
     <>
-      <Navbar transparent />
       <main className="profile-page">
         <Section />
             <section className="relative py-16 bg-blueGray-200">
@@ -33,7 +28,7 @@ export default function ProductDetail() {
                  {data.map((product)=>(
                    <div className="container px-5 py-24 mx-auto">
                    <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-10 mt-10"> 
-                   <Link to="/browseProduct" >Back </Link>
+                   <Link to="/BrowseProduct" >Back </Link>
                    </a>
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                       <img alt="ecommerce" className="lg:w-1/2 object-cover object-center rounded border border-gray-200" src="https://www.rugvista.no/image/desk_pdp_zoom/352769.jpg"/>
@@ -89,10 +84,10 @@ export default function ProductDetail() {
                         <div className="flex mt-16">
                           <span className="title-font font-medium text-2xl text-gray-900">$580.00</span>
                           <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          <Link to="cart"> Add to Cart </Link>
+                          <Link to="/Cart"> Add to Cart </Link>
                             </button>
                           <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          <Link to="browseProduct"> Continue Shopping </Link>
+                          <Link to="/BrowseProduct"> Continue Shopping </Link>
                             </button>
                         </div>
                       </div>
@@ -108,7 +103,6 @@ export default function ProductDetail() {
         </div>
       </section>
     </main>
-    <Footer/>
     </>
   );
 }

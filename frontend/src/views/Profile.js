@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 import Section from "./Section";
 
 export default function Profile() {
@@ -24,7 +21,6 @@ export default function Profile() {
     <>
     {data.map((item) => {
       return <>
-       <Navbar transparent />
       <main className="profile-page">
         <Section />        
             <section className="relative py-16 bg-blueGray-200">
@@ -106,7 +102,6 @@ export default function Profile() {
         </div>
       </section>
     </main>
-    <Footer/>
        </>
     })}
      

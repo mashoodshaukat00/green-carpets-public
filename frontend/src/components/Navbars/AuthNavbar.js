@@ -38,13 +38,13 @@ export default function Navbar(props) {
               <li className="flex items-center lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 text-xs uppercase font-bold">
                 {/* PagesDropdown  */}
                 {/* <IndexDropdown /> */}
-                <Link to="Profile"> Profile </Link>
+                <Link to="/Profile"> Profile </Link>
               </li>
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   target="_blank">                 
-                  <span className=" inline-block ml-2"><Link to="/browseProduct">Products</Link></span>
+                  <span className=" inline-block ml-2"><Link to="/BrowseProduct">Products</Link></span>
                 </a>
               </li>
               <li className="flex items-center">
