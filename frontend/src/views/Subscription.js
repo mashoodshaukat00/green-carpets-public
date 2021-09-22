@@ -1,14 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 import Section from "./Section";
 
 export default function Subscription() {
   return (
     <>
-      <Navbar transparent />
       <main className="profile-page">
         <Section />
             <section className="relative py-10 bg-blueGray-200">
@@ -63,7 +58,6 @@ export default function Subscription() {
         </div>
       </section>
     </main>
-    <Footer/>
     </>
   );
 }

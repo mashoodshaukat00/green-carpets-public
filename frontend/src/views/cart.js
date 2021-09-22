@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 import Section from "./Section";
 
 export default function Cart() {
@@ -19,7 +16,6 @@ export default function Cart() {
   }, []);
     return (
     <>
-      <Navbar transparent />
       <main className="profile-page">
         <Section />
             <section className="relative py-16 bg-blueGray-200">
@@ -29,7 +25,7 @@ export default function Cart() {
                 <div className="flex flex-wrap justify-center">    
                                 {/* cart starts here */}
                  <div className="container mx-auto mt-10">
-                 <Link className="text-black bold" to="/productDetail" >Back </Link>
+                 <Link className="text-black bold" to="/ProductDetail" >Back </Link>
                  
                   <div className="flex shadow-md my-10">
                     <div className="w-3/4 bg-white px-10 py-10">
@@ -76,7 +72,7 @@ export default function Cart() {
                           {/* <!-- product end --> */}
 
                       <a href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">
-                        <Link to="browseProduct"> Continue Shopping </Link>
+                        <Link to="/BrowseProduct"> Continue Shopping </Link>
                       </a>
                     </div>
                     <div id="summary" className="w-1/4 px-8 py-10 bg-green-500">
@@ -106,7 +102,7 @@ export default function Cart() {
                           <span>Total cost</span>
                           <span>$620</span>
                         </div>
-                        <Link to="checkout">
+                        <Link to="/Checkout">
                           <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
                             Checkout 
                           </button>
@@ -122,7 +118,6 @@ export default function Cart() {
         </div>
       </section>
     </main>
-    <Footer/>
     </>
   );
 }

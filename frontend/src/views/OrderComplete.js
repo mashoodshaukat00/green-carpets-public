@@ -1,14 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 import Section from "./Section";
 
 export default function OrderComplete() {
   return (
     <>
-      <Navbar transparent />
       <main className="profile-page">
         <Section />        
             <section className="relative py-16 bg-blueGray-200">
@@ -21,7 +17,7 @@ export default function OrderComplete() {
                     <div> Thank You for your purchase from Green Carpets </div>
                       <div>
                         <button className="mt-6 text-white bg-blueGray-800 border-0 focus:outline-none hover:bg-red-600 text-xl font-bold py-2 px-6 rounded">
-                        <Link to="/browseProduct"> Go Back to browse products</Link>
+                        <Link to="/BrowseProduct"> Go Back to browse products</Link>
                          </button></div>
                   </div>                                                     
                   {/* About Section ends here */}
@@ -31,7 +27,6 @@ export default function OrderComplete() {
         </div>
       </section>
     </main>
-    <Footer/>
     </>
   );
 }

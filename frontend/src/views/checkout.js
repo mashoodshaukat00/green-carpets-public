@@ -1,14 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
 import Section from "./Section";
 
 export default function Checkout() {
   return (
     <>
-      <Navbar transparent />
       <main className="profile-page">
         <Section />        
             <section className="relative py-16 bg-blueGray-200">
@@ -21,7 +17,7 @@ export default function Checkout() {
                   <div className="leading-loose">
                     <form className="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
                       <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-6 mt-2">
-                      <Link className="text-black bold" to="/cart" >Back </Link>
+                      <Link className="text-black bold" to="/Cart" >Back </Link>
                       </a>
                       <p className="text-gray-800 font-medium">Customer information</p>
                       <div className="">
@@ -62,7 +58,7 @@ export default function Checkout() {
                         <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email"  name="cus_email" type="text" required="" placeholder="CVC" aria-label="Email"/>
                       </div>
                       <div className="mt-4">
-                      <Link to="OrderComplete">
+                      <Link to="/OrderComplete">
                         <button className="w-full ml-auto inline-block text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                            Pay $580.00                         
                         </button>
@@ -78,7 +74,6 @@ export default function Checkout() {
         </div>
       </section>
     </main>
-    <Footer/>
     </>
   );
 }
