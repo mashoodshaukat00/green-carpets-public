@@ -1,34 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Section from "./Section";
+import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { selectedProduct, removeSelectedProduct } from 'redux/actions/productActions';
+import { insertProductInCart, removeProductFromCart,setCart } from 'redux/actions/cartActions';
 
-export default function ProductDetail() {
-  const [data, setData] = useState([]);
+
+
+export default function Product() {
+
+
+  const product = useSelector((state) => state.product)
+  const {productId } = useParams();
+  const dispatch = useDispatch();
+
+  console.log(productId);
+
+  const addToCartClick = (product) =>{
+    dispatch(insertProductInCart(product));
+  }
+
+  const fetchProductDetail = async () => {
+    const response = await axios.get(`https://localhost:44391/api/Products/GetProduct/${productId}`)
+    .catch((err)=> {
+      console.log("Error :",err);
+    });
+    dispatch(selectedProduct(response.data));
+  };
   useEffect(() => {
-    fetch('https://localhost:44391/api/Products/GetProducts')
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    if(productId && productId !="") fetchProductDetail();
+    return () => {
+      dispatch(removeSelectedProduct());
+    }
+  }, [productId]);
   return (
-    <>
+
       <main className="profile-page">
         <Section />
             <section className="relative py-16 bg-blueGray-200">
               <div className=" mx-auto px-4">
                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
                 <div className="px-6 py-6">
-                 <div className="flex flex-wrap justify-center">    
+                 <div className="flex flex-wrap justify-center">
                  {/* Product detail starts here */}
+                 {Object.keys(product).length===0?(
+                   <div>...Loading</div>
+                 ):(
                  <section className="text-gray-700 body-font overflow-hidden bg-white">
-                 {data.map((product)=>(
-                   <div className="container px-5 py-24 mx-auto">
-                   <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-10 mt-10"> 
-                   <Link to="/BrowseProduct" >Back </Link>
+                    <div className="container px-5 py-24 mx-auto">
+                   <a href="#" className="flex font-semibold text-blueGray-800 text-lg pb-10 mt-10">
+                   <Link to="/Products" >Back </Link>
                    </a>
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                       <img alt="ecommerce" className="lg:w-1/2 object-cover object-center rounded border border-gray-200" src="https://www.rugvista.no/image/desk_pdp_zoom/352769.jpg"/>
@@ -79,23 +102,28 @@ export default function ProductDetail() {
                             <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
                             <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
                             <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                          </div>          
+                          </div>
                         </div>
                         <div className="flex mt-16">
                           <span className="title-font font-medium text-2xl text-gray-900">$580.00</span>
-                          <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                          <Link to="/Cart"> Add to Cart </Link>
-                            </button>
+                          <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded" onClick={()=>addToCartClick(product)}>
+                          Add to Cart
+                          </button>
+
                           <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                           <Link to="/BrowseProduct"> Continue Shopping </Link>
                             </button>
                         </div>
+                        <div className="flex mt-16">
+                        <button className="flex ml-auto text-white bg-blueGray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                          <Link to="/Cart"> Cart </Link>
+                          </button>
+                          </div>
                       </div>
                     </div>
                   </div>
-                 ))}
-                  
                 </section>
+                 )}
                  {/* Product detail ends here */}
               </div>
             </div>
@@ -103,6 +131,6 @@ export default function ProductDetail() {
         </div>
       </section>
     </main>
-    </>
+
   );
 }

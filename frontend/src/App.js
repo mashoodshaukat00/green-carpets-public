@@ -19,9 +19,9 @@ import Auth from "layouts/Auth.js";
 // import Profile from "views/Profile.js";
 // import Index from "views/Index.js";
 
-import BrowseProduct from "views/BrowseProduct";
-import ProductDetail from "views/ProductDetail";
-import Cart from "views/Cart";
+import Products from "views/Products"
+import Product from "views/Product";
+import Cart from "views/Cart"
 import Checkout from "views/checkout";
 import Profile from "views/Profile";
 import HomePage from "views/HomePage";
@@ -33,89 +33,74 @@ import Section from "views/Section";
 
 export default function App() {
  return (
-     <>
-    {/* <Navbar transparent />
-    <HomePage />
-    <Profile />
-    <Subscription />
-    <BrowseProduct />
-    <ProductDetail />
-    <Cart />
-    <Checkout />
-    <OrderComplete />    
-
-    <Footer /> */}
 
       <Switch >
-      <Route exact path="/BrowseProduct" render={() => (
-          <>
+      <Route exact path="/" render={() => (
+         <div>
           <Navbar transparent/>
-            <BrowseProduct />
+            <Products />
           <Footer/>
-          </>
+          </div>
         )} />
-         <Route exact path="/ProductDetail" render={() => (
-          <>
+        <Route exact path="/Products" render={() => (
+         <div>
           <Navbar transparent/>
-            <ProductDetail />
+            <Products />
           <Footer/>
-          </>
+          </div>
+        )} />
+         <Route exact path="/Product/:productId" render={() => (
+          <div>
+          <Navbar transparent/>
+            <Product />
+          <Footer/>
+          </div>
         )} />
         <Route exact path="/Cart" render={() => (
-          <>
+          <div>
           <Navbar transparent/>
             <Cart />
           <Footer/>
-          </>
+          </div>
         )} />
         <Route exact path="/Checkout" render={() => (
-          <>
+          <div>
           <Navbar transparent/>
             <Checkout />
           <Footer/>
-          </>
+          </div>
         )} />
         <Route exact path="/OrderComplete" render={() => (
-          <>
+          <div>
           <Navbar transparent/>
             <OrderComplete />
           <Footer/>
-          </>
+          </div>
         )} />
         <Route exact path="/" render={() => (
-          <>
+          <div>
           <Navbar transparent/>
             <HomePage />
           <Footer/>
-          </>
+          </div>
         )} />
         <Route exact path="/Profile" render={() => (
-          <>
+          <div>
           <Navbar transparent/>
             <Profile />
           <Footer/>
-          </>
+          </div>
         )} />
         <Route exact path="/Subscription" render={() => (
-          <>
+          <div>
           <Navbar transparent/>
             <Subscription />
           <Footer/>
-          </>
+          </div>
         )} />
       <Route path="/auth" component={Auth} />
-      {/* <Route exact path="/" component={HomePage} /> */}
-      {/* <Route exact path="/BrowseProduct" component={BrowseProduct} /> */}
-      {/* <Route exact path="/ProductDetail" component={ProductDetail} /> */}
-      {/* <Route exact path="/Cart" component={Cart} /> */}
-      {/* <Route exact path="/Checkout" component={Checkout} /> */}
-      {/* <Route exact path="/Profile" component={Profile} /> */}
-      {/* <Route exact path="/HomePage" component={HomePage} /> */}
-      {/* <Route exact path="/OrderComplete" component={OrderComplete} /> */}
-      {/* <Route exact path="/Subscription" component={Subscription} /> */}
 
-      {/* add redirect for first page */}
       <Redirect from="*" to="/" />
-      </Switch>   
-  </>
+      </Switch>
+
   ) }

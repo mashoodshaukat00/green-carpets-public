@@ -11,16 +11,17 @@ namespace GC.WebApi.Models
         {
         }
 
-        public ProductModel(long id, int categoryId, int supplierId, int branchId, string name, string description, int quantity, decimal? price)
+        public ProductModel(long id, int categoryId, int supplierId, int branchId, string name, string description, int quantity, decimal? price, string imageUrl)
         {
             Id = id;
             CategoryId = categoryId;
             SupplierId = supplierId;
             BranchId = branchId;
-            Name = name ?? throw new ArgumentNullException(nameof(name));
-            Description = description ?? throw new ArgumentNullException(nameof(description));
+            Name = name;
+            Description = description;
             Quantity = quantity;
             Price = price;
+            ImageUrl = imageUrl;
         }
 
         public long Id { get; set; }
@@ -38,5 +39,6 @@ namespace GC.WebApi.Models
         public int Quantity { get; set; }
 
         public decimal? Price { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

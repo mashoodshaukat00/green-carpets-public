@@ -49,4 +49,23 @@ namespace GC.WebApi.Models
         public string ModifiedBy { get; set; }
         public DateTime? ModifiedAt { get; set; }
     }
+
+    public class UserLoginModel
+    {
+        public UserLoginModel()
+        {
+        }
+
+        public UserLoginModel(bool isValidUser, Guid? userId, string userName)
+        {
+            IsValidUser = isValidUser;
+            UserId = userId;
+            UserName = userName;
+        }
+
+        public bool IsValidUser { get; set; }
+        public Guid? UserId { get; set; }
+
+        public string UserName { get; set; }
+    }
 }

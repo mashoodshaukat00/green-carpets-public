@@ -102,8 +102,13 @@ namespace GC.WebApi.Services
             {
                 Id = product.Id,
                 Name = product.Name,
+                BranchId = product.BranchId,
                 Description = product.Description,
-                CategoryId = product.CategoryId
+                CategoryId = product.CategoryId,
+                Quantity = product.Quantity,
+                Price = product.DisplayPrice,
+                SupplierId = product.SupplierId,
+                ImageUrl = product.ImageUrl
             };
         }
 
@@ -111,10 +116,15 @@ namespace GC.WebApi.Services
         {
             return new Product()
             {
-                // Id = model.Id,
+                Id = model.Id,
                 Name = model.Name,
+                BranchId = model.BranchId,
                 Description = model.Description,
-                CategoryId = model.CategoryId
+                CategoryId = model.CategoryId,
+                Quantity = model.Quantity,
+                DisplayPrice = model.Price,
+                SupplierId = model.SupplierId,
+                ImageUrl = model.ImageUrl
 
             };
         }

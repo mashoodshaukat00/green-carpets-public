@@ -1,7 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { setLoginData } from "redux/actions/userActions";
+import { useDispatch } from "react-redux";
+
 
 export default function Login() {
+ 
+  const dispatch = useDispatch();
+
+    const authenticateUser = async (userName,password) => {
+      const response = await axios.get(`https://localhost:44391/api/User/Login/${userName}/${password}`)
+      .catch((err)=> {
+        console.log("Error :",err);
+      });
+      dispatch(setLoginData(response.data));
+      // Now send the user to main page or index "/"
+      //this.transitionTo('/');
+    };
+    
+
+  
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -44,15 +63,19 @@ export default function Login() {
                 <div className="text-blueGray-400 text-center mb-3 font-bold">
                   <small>Or sign in with credentials</small>
                 </div>
-                <form>
+                {/* onSubmit={authenticateUser()} */}
+                <form >
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Email
+                      User Name
                     </label>
                     <input
+                    // onChange={e => setUserName(e.target.value)
+                    
+                    id="tbUserName"
                       type="email"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Email"
@@ -67,6 +90,7 @@ export default function Login() {
                       Password
                     </label>
                     <input
+                      id='tbPassword'
                       type="password"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Password"
@@ -86,10 +110,10 @@ export default function Login() {
                   </div>
 
                   <div className="text-center mt-6">
-                    <button
+                    <button                   
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
-                    >
+                      onClick={()=>authenticateUser(document.getElementById('tbUserName').value,document.getElementById('tbPassword').value)}>
                       Sign In
                     </button>
                   </div>

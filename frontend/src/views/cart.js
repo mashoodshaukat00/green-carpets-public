@@ -1,37 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import Section from "./Section";
+import { useParams,Link } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import { GetTotalCartItemCount, insertProductInCart,removeProductFromCart } from 'redux/actions/cartActions';
 
 export default function Cart() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch('https://localhost:44391/api/Products/GetProducts')
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-    return (
-    <>
+  const cartItems = useSelector((state) => state.cartData.items);
+  const countOfItems = useSelector((state)=> state.cartData.cartItemCount);
+
+  function count ()
+  {
+    let sum = 0;
+    cartItems.forEach(function(value, index, arry){
+      sum += value.price * value.quantity;
+     });
+     return sum;
+  }
+
+  const summaryTotal = count();
+
+  return (
+
       <main className="profile-page">
         <Section />
             <section className="relative py-16 bg-blueGray-200">
               <div className=" mx-auto px-4">
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
                 <div className="px-6 py-6">
-                <div className="flex flex-wrap justify-center">    
+                <div className="flex flex-wrap justify-center">
                                 {/* cart starts here */}
                  <div className="container mx-auto mt-10">
                  <Link className="text-black bold" to="/ProductDetail" >Back </Link>
-                 
+
                   <div className="flex shadow-md my-10">
                     <div className="w-3/4 bg-white px-10 py-10">
                       <div className="flex justify-between border-b pb-8">
                         <h1 className="font-semibold text-2xl">Shopping Cart</h1>
-                        <h2 className="font-semibold text-2xl">3 Items</h2>
+                        <h2 className="font-semibold text-2xl">{countOfItems} Items</h2>
                       </div>
                       <div className="flex mt-10 mb-5">
                         <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
@@ -42,11 +47,12 @@ export default function Cart() {
 
                       {/* <!-- product start --> */}
                       {
-                   data.map((product)=>(
+                   cartItems.map((product)=>(
                     <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                        <div className="flex w-2/5">                          
+                        <div className="flex w-2/5">
                           <div className="w-20">
-                            <img className="h-24" src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z" alt=""/>
+                            {/* {product.imageUrl} */}
+                            <img className="h-24" src="https://www.rugvista.no/image/desk_pdp_zoom/352769.jpg" alt=""/>
                           </div>
                           <div className="flex flex-col justify-between ml-4 flex-grow">
                             <span className="font-bold text-sm">{product.name }</span>
@@ -58,17 +64,17 @@ export default function Cart() {
                           <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                           </svg>
 
-                          <input className="mx-2 border text-center w-8" type="text" value="1"/>          
+                          <input className="mx-2 border text-center w-8" type="text" value="1"/>
 
                           <svg className="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                           </svg>
                         </div>
                         <span className="text-center w-1/5 font-semibold text-sm">{product.price}</span>
-                        <span className="text-center w-1/5 font-semibold text-sm">$400.00</span>
+                        <span className="text-center w-1/5 font-semibold text-sm">${product.price * product.quantity}</span>
                       </div>
                    ))}
-                      
+
                           {/* <!-- product end --> */}
 
                       <a href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">
@@ -78,13 +84,13 @@ export default function Cart() {
                     <div id="summary" className="w-1/4 px-8 py-10 bg-green-500">
                       <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
                       <div className="flex justify-between mt-10 mb-5">
-                        <span className="font-semibold text-sm uppercase">Items 3</span>
-                        <span className="font-semibold text-sm">590$</span>
+                        <span className="font-semibold text-sm uppercase">Quantity : {countOfItems}</span>
+                        <span className="font-semibold text-sm">{summaryTotal}</span>
                       </div>
                       <div>
                         <label className="font-medium inline-block mb-3 text-sm uppercase">delivery</label>
                         <select className="block p-2 text-gray-600 w-full text-sm">
-                          <option>Standard delivery - free</option>
+                          {/* <option>Standard delivery - free</option> */}
                           <option>Same day delivery - $20.00</option>
                         </select>
                       </div>
@@ -100,11 +106,11 @@ export default function Cart() {
                       <div className="border-t mt-8">
                         <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                           <span>Total cost</span>
-                          <span>$620</span>
+                          <span>{summaryTotal+50}</span>
                         </div>
                         <Link to="/Checkout">
                           <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
-                            Checkout 
+                            Checkout
                           </button>
                         </Link>
                       </div>
@@ -118,6 +124,6 @@ export default function Cart() {
         </div>
       </section>
     </main>
-    </>
+
   );
 }
