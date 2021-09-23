@@ -34,9 +34,10 @@ namespace GC.WebApi.Controllers
         }
 
         [HttpGet("{userName}/{password}")]
-        public async Task<bool> LoginAsync(string userName, string password)
+        public async Task<UserLoginModel> LoginAsync(string userName, string password)
         {
             return await _service.AttemptLoginAsync(userName, password);
+            
         }
 
 

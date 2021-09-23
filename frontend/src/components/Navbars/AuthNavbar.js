@@ -33,23 +33,23 @@ export default function Navbar(props) {
               "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
               (navbarOpen ? " block rounded shadow-lg" : " hidden")
             }
-            id="example-navbar-warning">           
+            id="example-navbar-warning">
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 text-xs uppercase font-bold">
                 {/* PagesDropdown  */}
                 {/* <IndexDropdown /> */}
-                <Link to="ProfilePage"> Profile </Link>
+                <Link to="/Profile"> Profile </Link>
               </li>
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  target="_blank">                 
-                  <span className=" inline-block ml-2"><Link to="/browseProduct">Products</Link></span>
+                  target="_blank">
+                  <span className=" inline-block ml-2"><Link to="/Products">Products</Link></span>
                 </a>
               </li>
               <li className="flex items-center">
                 <a
-                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">                  
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
                   <span className="inline-block ml-2"><Link to="/Subscription">Subscriptions</Link></span>
                 </a>
               </li>
@@ -57,7 +57,7 @@ export default function Navbar(props) {
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://github.com/creativetimofficial/notus-react?ref=nr-auth-navbar"
-                  target="_blank">                 
+                  target="_blank">
                   <span className="inline-block ml-2">About us</span>
                 </a>
               </li>

@@ -37,20 +37,20 @@ const IndexDropdown = () => {
         }
       >        
         <Link
-          to="/browseProduct"
+          to="/BrowseProduct"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Browse Products
         </Link>
         <Link
           // to="/admin/settings"
-          to="/productDetail"
+          to="/ProductDetail"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Product Detail
         </Link>
         <Link
-          to="/cart"
+          to="/Cart"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Cart
@@ -80,7 +80,7 @@ const IndexDropdown = () => {
           Register
         </Link>   
         <Link
-          to="/profile"
+          to="/Profile"
           className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
         >
           Profile

@@ -65,9 +65,20 @@ namespace GC.WebApi.Services
                 throw new Exception("Entry not found in database.");
             }
         }
-        public async Task<bool> AttemptLoginAsync(string userName,string password)
+        public async Task<UserLoginModel> AttemptLoginAsync(string userName,string password)
         {
-            return await _context.WebUsers.AnyAsync(x => x.UserName == userName && x.Password == password);
+            var result = await _context.WebUsers.FirstOrDefaultAsync(x => x.UserName == userName && x.Password == password);
+            if(result is null)
+            {
+                return null;
+            }
+
+            return new UserLoginModel
+            {
+                IsValidUser = true,
+                UserId = result.Id,
+                UserName = result.UserName
+            };
 
         }
         public async Task<UserModel> GetUserById(Guid id)
